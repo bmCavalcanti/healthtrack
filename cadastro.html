@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="title" content="">
+        <meta name="author" content="Bianca Cavalcanti">
+        <link href="./assets/images/logos/icon.png" rel="icon" type="image/x-icon" />
+
+        <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/vendor/select2/dist/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/app.css">
+
+        <title>Cadastro | Health Track</title>
+    </head>
+    <body>
+        <div class="container px-lg-5 py-5">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto mt-5">
+                <div class="text-center">
+                    <img alt="Logo Health Track" src="./assets/images/logos/logo.png" class="w-100 mb-4">
+                </div>
+
+                <ul class="nav nav-fill nav-pills">
+                    <li class="nav-item mr-1">
+                        <a title="Dados pessoais" class="nav-link btn-outline-dark changeStep active h5" href="#user" step="1">
+                            <span class="badge badge-pill bg-primary">1</span>
+                            Dados pessoais
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a title="Informações" class="nav-link btn-outline-dark changeStep h5" href="#info" step="2">
+                            <span class="badge badge-pill bg-primary">2</span>
+                            Informações
+                        </a>
+                    </li>
+                </ul>
+                <form action="">
+                    <div class="step fade show pt-3" id="user" step="1">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" name="nome" class="form-control" placeholder="Informe seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" name="email" class="form-control" placeholder="Informe seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" name="senha" class="form-control" placeholder="Crie uma senha">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Confirme a senha</label>
+                            <input type="password" name="senha_confirmacao" class="form-control" placeholder="Confirme sua senha">
+                        </div>
+                        <a title="Próximo" class="changeStep btn btn-primary btn-block mt-3 next" href="#info" step="2">
+                            Próximo
+                        </a>
+                    </div>
+                    <div class="step fade info" id="info" style="display:none" step="2">
+                        <div class="form-group">
+                            <label>Altura</label>
+                            <input type="number" min="50" max="300" name="altura" class="form-control" placeholder="Informe sua altura (cm)">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Peso</label>
+                            <input type="number" name="peso" min="10" max="600" class="form-control" placeholder="Informe seu peso (kg)">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gênero</label>
+                            <select name="genero" class="form-control">
+                                <option value="0">Feminino</option>
+                                <option value="1">Masculino</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" name="senha" class="form-control" placeholder="Crie uma senha">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Confirme a senha</label>
+                            <input type="text" name="senha_confirmacao" class="form-control" placeholder="Confirme sua senha">
+                        </div>
+
+                        <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+                            <a title="Voltar" class="changeStep btn btn-outline-primary next" href="#user" step="1">
+                                Voltar
+                            </a>
+                            <button type="submit" id="submit" class="btn btn-primary btn-block">
+                                Finalizar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/vendor/jquery-mask/dist/jquery.mask.min.js"></script>
+    <script src="./assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./assets/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="./assets/vendor/select2/dist/js/select2.full.min.js"></script>
+    <script src="./assets/js/src/App.js"></script>
+    <script src="./assets/js/app.js"></script>
+</html>
