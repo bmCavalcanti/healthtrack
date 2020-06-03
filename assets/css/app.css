@@ -1,51 +1,50 @@
 body, html {
-    background-color: #090414;
-    color: #CFD2FF;
-    font-weight: normal;
+  background-color: #090414;
+  color: #CFD2FF;
+  font-weight: normal;
 }
 
 a, a:hover {
-    color: #CFD2FF;
+  color: #CFD2FF;
 }
 
 .bg-primary {
-    background-color: #7443FF !important;
+  background-color: #7443FF !important;
 }
 
 .bg-dark {
-    background-color: #090414 !important;
+  background-color: #090414 !important;
 }
 
 .btn {
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 0;
 }
 
 .btn-primary {
-    background-color: #7443FF;
-    border-color: #7443FF;
-    color: #090414;
+  background-color: #7443FF;
+  border-color: #7443FF;
+  color: #090414;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #431bb1 !important;
-    border-color: #431bb1 !important;
-    color: #090414 !important;
-    box-shadow: none !important;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: #431bb1 !important;
+  border-color: #431bb1 !important;
+  color: #090414 !important;
+  box-shadow: none !important;
 }
 
 .btn-outline-primary {
-    color: #7443FF;
-    border-color: #7443FF;
+  color: #7443FF;
+  border-color: #7443FF;
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
-    background-color: #7443FF !important;
-    border-color: #7443FF !important;
-    box-shadow: none !important;
+  background-color: #7443FF !important;
+  border-color: #7443FF !important;
+  box-shadow: none !important;
 }
-
 
 .select2-container--default .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple,
@@ -68,7 +67,7 @@ a, a:hover {
 }
 
 .form-control, .select2-selection__rendered {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   border: none;
   border-bottom: 2px solid #7443FF;
   border-radius: 0;
@@ -105,9 +104,9 @@ a, a:hover {
 }
 
 .form-control::placeholder, .select2-selection__placeholder {
-    color: #CFD2FF;
-    opacity: .5;
-    font-weight: 100;
+  color: #CFD2FF;
+  opacity: .5;
+  font-weight: 100;
 }
 
 .select2-selection__choice {
@@ -151,5 +150,62 @@ a, a:hover {
 label.invalid {
   font-size: .7rem;
   color: red;
+  margin-bottom: 0;
+}
+
+.user-img {
+  border: 4px solid #7443FF;
+}
+
+.imc-bar {
+  background:-moz-linear-gradient(right, #00C2FF, #7443FF, #ff0000);
+  background: -webkit-linear-gradient(right, #00C2FF, #7443FF, #ff0000);
+  background: linear-gradient(to right, #00C2FF, #7443FF, #ff0000);
+  height: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+
+.imc-bar li span {
+  display: none;
+}
+
+.imc-bar li.active span {
+  display: block;
+  bottom: 25px;
+  justify-content: center;
+  position: relative;
+  right: 15px;
+}
+
+.imc-bar li.active {
+  background-color: #CFD2FF;
+  width: 5px;
+  height: 16px;
+  position: relative;
+  bottom: 4px;
+  border-radius: 25%;
+}
+
+@media only screen and (min-width: 768px) {
+  .body-adjust {
+    margin: 0 100px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .body-adjust {
+    margin: 0 250px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .body-adjust {
+    margin: 0 350px;
+  }
 }
 

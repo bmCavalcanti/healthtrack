@@ -1,11 +1,12 @@
 $.validator.setDefaults({
     focusInvalid: false,
     focusCleanup: false,
-    errorClass: 'invalid',
+    errorClass: "invalid",
+    lang: "pt-BR",
     highlight: function (element, errorClass, validClass) {
         var elem = $(element);
         if (elem.hasClass("select2-hidden-accessible")) {
-            elem.next().find('.select2-selection').addClass(errorClass);
+            elem.next().find(".select2-selection").addClass(errorClass);
         } else {
             elem.addClass(errorClass);
         }
@@ -13,7 +14,7 @@ $.validator.setDefaults({
     unhighlight: function (element, errorClass, validClass) {
         var elem = $(element);
         if (elem.hasClass("select2-hidden-accessible")) {
-            elem.next().find('.select2-selection').removeClass(errorClass);
+            elem.next().find(".select2-selection").removeClass(errorClass);
         } else {
             elem.removeClass(errorClass);
         }
@@ -21,7 +22,7 @@ $.validator.setDefaults({
     errorPlacement: function(error, element) {
         var elem = $(element);
         if (elem.hasClass("select2-hidden-accessible")) {
-            error.insertAfter(elem.next().find('.select2-selection'));
+            error.insertAfter(elem.next().find(".select2-selection"));
         } else {
             error.insertAfter(element);
         }
@@ -30,21 +31,19 @@ $.validator.setDefaults({
 
 $.validator.addMethod("fullName", function(value, element) {
     var val = $.trim(value);
-    return this.optional(element) || val.indexOf(' ') >= 0;
+    return this.optional(element) || val.indexOf(" ") >= 0;
 }, "Nome inválido. Por favor, insira seu nome completo.");
 
 function masks() {
-    $('.zip').mask('00000-000');
-    $('.phone').mask('(00) 0000-0000');
-    $('.cellphone').mask('(00) 0 0000-0000');
-    $('.money').mask('#0,00', {reverse: true})
+    $(".cm").mask("#0.00", {reverse: true});
+    $(".kg").mask("#0.00", {reverse: true});
 }
 
 function callSelect2() {
-    $('select:not(.d-none)').select2({
+    $("select:not(.d-none)").select2({
         allowClear: true,
         width: "100%",
-        placeholder: 'Selecione uma opção'
+        placeholder: "Selecione uma opção"
     });
 }
 

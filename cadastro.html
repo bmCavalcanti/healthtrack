@@ -10,10 +10,11 @@
         <meta name="author" content="Bianca Cavalcanti">
         <link href="./assets/images/logos/icon.png" rel="icon" type="image/x-icon" />
 
-        <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/vendor/select2/dist/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/app.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="./assets/css/app.css">
         <title>Cadastro | Health Track</title>
     </head>
     <body>
@@ -37,65 +38,61 @@
                         </a>
                     </li>
                 </ul>
-                <form action="">
+                <form action="" autocomplete="off">
                     <div class="step fade show pt-3" id="user" step="1">
                         <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Informe seu nome completo">
+                            <input type="text" required name="name"class="form-control" placeholder="Informe seu nome completo" minlength="3">
                         </div>
 
                         <div class="form-group">
                             <label>E-mail</label>
-                            <input type="email" name="email" class="form-control" placeholder="Informe seu e-mail">
+                            <input type="email" required name="email" class="form-control" placeholder="Informe seu e-mail" minlength="6">
                         </div>
 
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" name="senha" class="form-control" placeholder="Crie uma senha">
+                            <input type="password" required name="password" class="form-control" placeholder="Crie uma senha" id="password" minlength="6">
                         </div>
 
                         <div class="form-group">
                             <label>Confirme a senha</label>
-                            <input type="password" name="senha_confirmacao" class="form-control" placeholder="Confirme sua senha">
+                            <input type="password" required name="password_confirme" class="form-control" placeholder="Confirme sua senha" data-rule-equalto="#password" minlength="6">
                         </div>
                         <a title="Próximo" class="changeStep btn btn-primary btn-block mt-3 next" href="#info" step="2">
                             Próximo
                         </a>
                     </div>
-                    <div class="step fade info" id="info" style="display:none" step="2">
+                    <div class="step fade pt-3" id="info" style="display:none" step="2">
                         <div class="form-group">
-                            <label>Altura</label>
-                            <input type="number" min="50" max="300" name="altura" class="form-control" placeholder="Informe sua altura (cm)">
+                            <label>Altura (cm)</label>
+                            <input type="text" required name="height" class="form-control cm" placeholder="Informe sua altura (cm)" data-rule-number="true" max="300" min="50">
                         </div>
 
                         <div class="form-group">
-                            <label>Peso</label>
-                            <input type="number" name="peso" min="10" max="600" class="form-control" placeholder="Informe seu peso (kg)">
+                            <label>Peso (kg)</label>
+                            <input type="text" required name="weight" class="form-control kg" placeholder="Informe seu peso (kg)" data-rule-number="true" max="900" min="10">
                         </div>
 
                         <div class="form-group">
                             <label>Gênero</label>
-                            <select name="genero" class="form-control">
+                            <select name="gender" required class="form-control">
+                                <option value="" selected disabled>Selecione uma opção</option>
                                 <option value="0">Feminino</option>
                                 <option value="1">Masculino</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Senha</label>
-                            <input type="password" name="senha" class="form-control" placeholder="Crie uma senha">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Confirme a senha</label>
-                            <input type="text" name="senha_confirmacao" class="form-control" placeholder="Confirme sua senha">
+                            <label>Data de nascimento</label>
+                            <input type="date" required name="birthdate" class="form-control">
                         </div>
 
                         <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
                             <a title="Voltar" class="changeStep btn btn-outline-primary next" href="#user" step="1">
                                 Voltar
                             </a>
-                            <button type="submit" id="submit" class="btn btn-primary btn-block">
+                            <button type="submit" class="btn btn-primary btn-block">
                                 Finalizar
                             </button>
                         </div>
@@ -104,13 +101,17 @@
             </div>
         </div>
     </body>
-    <script src="./assets/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/vendor/popper/popper.min.js"></script>
-    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./assets/vendor/jquery-mask/dist/jquery.mask.min.js"></script>
-    <script src="./assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="./assets/vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="./assets/vendor/select2/dist/js/select2.full.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/localization/messages_pt_PT.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" crossorigin="anonymous"></script>
+
     <script src="./assets/js/src/App.js"></script>
     <script src="./assets/js/app.js"></script>
 </html>
