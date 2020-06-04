@@ -25,5 +25,57 @@ $(document).ready(function() {
 
     $("body").find("input[name='birthdate']").attr("max", new Date().toISOString().split("T")[0]);
 
-    $("body").css("margin-bottom", $("#bar-navigation").height())
+    $("body").css("margin-bottom", $("#bar-navigation").height());
+
+
+    // if ($("#chart")) {
+
+
+        var chart = new Chart($("#chart-weight"), {
+            type: 'line',
+            scaleStartValue: 0,
+            scaleOverride: true,
+            steppedLine: 'before',
+
+            data: {
+                datasets: [{
+                    label: 'Peso',
+                    data: [52.56, 51.14, 53.25, 55.45],
+                    backgroundColor: 'transparent',
+                    borderColor: '#CFD2FF',
+                    fontColor: '#CFD2FF',
+                }],
+                labels: ['26 de mar', '17 de jan', '12 de jan' , '31 de mar']
+            },
+            options: {
+                hover: {
+                    mode: 'dataset',
+                    animationDuration: 0
+                },
+                elements: {
+                    point: {
+                        borderWidth: 6,
+                        fill: false,
+                        hoverBorderWidth: 6,
+                    }
+                },
+                legend: {
+                    display: false,
+                    fontColor: "#CFD2FF"
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor: "#CFD2FF",
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            fontColor: "#CFD2FF",
+                        }
+                    }]
+                }
+            }
+        });
+    // }
 });
