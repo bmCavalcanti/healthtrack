@@ -27,30 +27,24 @@ $(document).ready(function() {
 
     $("body").css("margin-bottom", $("#bar-navigation").height());
 
-
-    // if ($("#chart")) {
-
-
+    if ($("#chart-weight").length) {
         var chart = new Chart($("#chart-weight"), {
             type: 'line',
-            scaleStartValue: 0,
-            scaleOverride: true,
-            steppedLine: 'before',
-
             data: {
                 datasets: [{
                     label: 'Peso',
-                    data: [52.56, 51.14, 53.25, 55.45],
+                    data: [42.14, 45.25, 42.45, 43.84],
                     backgroundColor: 'transparent',
                     borderColor: '#CFD2FF',
                     fontColor: '#CFD2FF',
                 }],
-                labels: ['26 de mar', '17 de jan', '12 de jan' , '31 de mar']
+                labels: ['17 de jan', '12 de fev' , '31 de mar', '04 de jun']
             },
             options: {
-                hover: {
-                    mode: 'dataset',
-                    animationDuration: 0
+                layout: {
+                    padding: {
+                        right: 20,
+                    }
                 },
                 elements: {
                     point: {
@@ -70,12 +64,24 @@ $(document).ready(function() {
                         }
                     }],
                     yAxes: [{
+                        position: 'right',
                         ticks: {
                             fontColor: "#CFD2FF",
+                            suggestedMin: 40,
+                            suggestedMax: 70,
+                            stepSize: 10,
+                            callback: function(label, index, labels) {
+                                return label + ' kg';
+                            }
+                        },
+                        gridLines: {
+                            color: "#CFD2FF",
+                            display: true,
+                            drawOnChartArea: true
                         }
                     }]
                 }
             }
         });
-    // }
+    }
 });

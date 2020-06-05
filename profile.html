@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="title" content="">
+        <meta name="author" content="Bianca Cavalcanti">
+        <link href="./assets/images/logos/icon.png" rel="icon" type="image/x-icon" />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./assets/css/app.css">
+        <title>Dashboard | Health Track</title>
+    </head>
+    <body>
+        <div class="body-adjust py-5 ">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="overlay-box">
+                    <img src="./assets/images/userplaceholder.png" alt="Foto de perfil de Bianca Cavalcanti" class="d-inline-block user-img rounded-circle " width="100"/>
+                    <div class="overlay">
+                        <a href="">
+                            <i class="fa fa-pencil-alt overlay-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <span class="ml-3">
+                    <h4>
+                        Bianca Cavalcanti
+                    </h4>
+                    <span>
+                        19 anos
+                    </span>
+                </span>
+            </div>
+
+            <form action="" method="POST" autocomplete="off">
+                <div class="step fade show pt-3" id="user" step="1">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" required name="name"class="form-control" placeholder="Informe seu nome completo" minlength="3" value="Bianca Cavalcanti">
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" required name="email" class="form-control" placeholder="Informe seu e-mail" minlength="6" value="bianca.cavalcanti@healthtrack.com.br">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Altura (cm)</label>
+                        <input type="text" required name="height" class="form-control cm" placeholder="Informe sua altura (cm)" data-rule-number="true" max="300" min="50" value="160.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gênero</label>
+                        <select name="gender" required class="form-control">
+                            <option value="0" selected>Feminino</option>
+                            <option value="1">Masculino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data de nascimento</label>
+                        <input type="date" required name="birthdate" class="form-control" value="2000-09-07">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Salvar alterações
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+        <nav class="fixed-bottom" id="bar-navigation">
+            <div class="btn-group w-100" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary text-white">
+                    <i class="fa fa-home"></i><br>
+                    <small>Home</small>
+                </button>
+                <button type="button" class="btn btn-primary text-white">
+                    <i class="fa fa-cogs"></i><br>
+                    <small>Perfil</small>
+                </button>
+                <button type="button" class="btn btn-primary text-white">
+                    <i class="fa fa-door-open"></i><br>
+                    <small>Sair</small>
+                </button>
+            </div>
+        </nav>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/localization/messages_pt_PT.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/src/App.js"></script>
+    <script src="./assets/js/app.js"></script>
+</html>

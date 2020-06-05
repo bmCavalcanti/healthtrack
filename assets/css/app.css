@@ -17,6 +17,10 @@ a, a:hover {
   background-color: #7443FF !important;
 }
 
+.text-primary {
+  color: #7443FF !important;
+}
+
 .bg-dark {
   background-color: #090414 !important;
 }
@@ -77,7 +81,7 @@ a, a:hover {
   border-bottom: 2px solid #7443FF;
   border-radius: 0;
   -webkit-transition: .3s border-bottom-color ease;
-          transition: .3s border-bottom-color ease;
+      transition: .3s border-bottom-color ease;
   padding: 0px 5px;
   background: transparent;
   color: #CFD2FF !important;
@@ -85,6 +89,7 @@ a, a:hover {
 
 .select2-container {
   margin-bottom: 10px;
+  border-bottom: 2px solid #7443FF;
 }
 
 .form-control:disabled {
@@ -133,23 +138,23 @@ a, a:hover {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-    border-color: #7443FF transparent transparent transparent;
+  border-color: #7443FF transparent transparent transparent;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #CFD2FF !important;
+  color: #CFD2FF !important;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
-    padding: 15px;
+  padding: 15px;
 }
 
 .select2-search--dropdown, .select2-results {
-    background-color: #090414;
+  background-color: #090414;
 }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: #431bb1;
+  background-color: #431bb1;
 }
 
 label.invalid {
@@ -212,27 +217,53 @@ label.invalid {
   background: transparent;
 }
 
+.overlay-box {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 92%;
+  height: 50%;
+  background-color: rgba(9, 4, 20, .8);
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  top: 46%;
+  left: 4%;
+  font-size: 25px;
+}
+
+.overlay .overlay-icon {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 @media only screen and (min-width: 320px) {
   .body-adjust {
-    margin: 0 20px;
+  margin: 0 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .body-adjust {
-    margin: 0 150px;
+  margin: 0 150px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .body-adjust {
-    margin: 0 300px;
+  margin: 0 300px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .body-adjust {
-    margin: 0 450px;
+  margin: 0 450px;
   }
 }
 

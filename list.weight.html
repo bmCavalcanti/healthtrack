@@ -29,18 +29,44 @@
         </nav>
 
         <div class="body-adjust py-5">
-            <div>
+            <div class="pb-3">
+                <nav class="nav-top d-flex bg-transparent align-items-center justify-content-between mb-3">
+                    <a href="">
+                        <i class="fa fa-angle-left fa-2x"></i>
+                    </a>
+                    <h4>2020</h4>
+                    <a href="">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                    </a>
+                </nav>
                 <canvas id="chart-weight">
                 </canvas>
             </div>
 
-            <table class="table mt-5 ">
+            <table class="table mt-5">
                 <tbody>
+                    <tr>
+                        <td>
+                            <small>04 de junho de 2020</small>
+                            <br>
+                            43,84 kg
+                        </td>
+                        <td class="text-right align-middle">
+                            <div class="btn-group" role="group">
+                                <a href="" role="button" class="ml-3 btn-action">
+                                    <i class="fa fa-pencil-alt"></i>
+                                </a>
+                                <a href="" role="button" class="ml-3 btn-action">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <small>31 de março de 2020</small>
                             <br>
-                            55,45 kg
+                            42,45 kg
                         </td>
                         <td class="text-right align-middle">
                             <div class="btn-group" role="group">
@@ -57,7 +83,7 @@
                         <td>
                             <small>12 de fevereiro de 2020</small>
                             <br>
-                            53,25 kg
+                            45,25 kg
                         </td>
                         <td class="text-right align-middle">
                             <div class="btn-group" role="group">
@@ -72,9 +98,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <small>17 de janeiro de 2019</small>
+                            <small>17 de janeiro de 2020</small>
                             <br>
-                            51,14 kg
+                            42,14 kg
                         </td>
                         <td class="text-right align-middle">
                             <div class="btn-group" role="group">
@@ -106,6 +132,30 @@
                     </tr>
                 </tbody>
             </table>
+
+            <nav>
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link btn-light text-primary" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link btn-light text-primary" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link btn-light text-primary" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link btn-light text-primary" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link btn-light text-primary" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <nav class="fixed-bottom" id="bar-navigation">
