@@ -9,8 +9,13 @@ body, html {
   color: #CFD2FF;
 }
 
-a, a:hover {
+a {
   color: #CFD2FF;
+}
+
+a:hover {
+  color: #7443FF;
+  text-decoration: none;
 }
 
 .bg-primary {
