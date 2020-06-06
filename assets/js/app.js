@@ -2,6 +2,14 @@ $(document).ready(function() {
     masks();
     callSelect2();
 
+    $("div[step='1']").keydown(function(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            $("a[href='#info']").click();
+            return false;
+        }
+    });
+
     $("body").on("click", ".changeStep", function(e) {
         e.preventDefault();
 
