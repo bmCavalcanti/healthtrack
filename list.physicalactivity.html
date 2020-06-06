@@ -19,11 +19,11 @@
     </head>
     <body>
         <nav class="fixed-top nav-top d-flex align-items-center justify-content-between">
-            <a href="./dashboard" class="mx-3">
+            <a title="Voltar para a dashboard" href="./dashboard" class="mx-3">
                 <i class="fa fa-angle-left fa-2x"></i>
             </a>
             <h3>Atividade física</h3>
-            <a data-toggle="modal" data-target="#modalCrud" href="" class="mr-3">
+            <a title="Adicionar atividade física" data-toggle="modal" data-target="#modalCrud" href="" class="mr-3">
                 <i class="fa fa-plus fa-2x"></i>
             </a>
         </nav>
@@ -32,7 +32,7 @@
             <div class="input-group p-0 col-12 col-lg-5 mt-5">
                 <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
                 <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary btn-sm">
+                    <button title="Buscar" type="submit" class="btn btn-primary btn-sm">
                         <i class="fa fa-search fa-1x"></i>
                     </button>
                 </div>
@@ -51,10 +51,10 @@
                         </td>
                         <td class="text-right">
                             <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </div>
@@ -72,10 +72,10 @@
                         </td>
                         <td class="text-right">
                             <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </div>
@@ -93,10 +93,10 @@
                         </td>
                         <td class="text-right">
                             <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </div>
@@ -112,7 +112,7 @@
                 <nav class="col-12 col-lg-6">
                     <ul class="pagination justify-content-end">
                         <li class="page-item">
-                            <a class="page-link btn-primary" href="#">
+                            <a class="page-link btn-primary" href="#" title="Página anterior">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
@@ -120,7 +120,7 @@
                             <a class="page-link btn-primary active" href="#">1</a>
                         </li>
                         <li class="page-item">
-                            <a class="page-link btn-primary" href="#">
+                            <a class="page-link btn-primary" href="#"  title="Próxima página">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
@@ -180,7 +180,7 @@
                             <span>&times;</span>
                         </button>
                     </div>
-                    <form action="" method="POST" autocomplete="off">
+                    <form action="" method="GET" autocomplete="off">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label>Tipo</label>
