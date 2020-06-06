@@ -9,6 +9,24 @@ body {
   margin-top: 80px;
 }
 
+.white-image {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.parallax {
+  background-image: url("../images/banner.jpg");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-opacity {
+  background-color: rgba(9, 4, 20, .8);
+}
+
 .table {
   color: #CFD2FF;
 }

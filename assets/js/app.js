@@ -109,4 +109,14 @@ $(document).ready(function() {
     if ($("body").find(".recomended-weight").length) {
         $("body").find(".recomended-weight").html(calculateWeight());
     }
+
+    $("body").on("blur", "#old_password", function() {
+        if ($(this).val() != "") {
+            $("#password").attr("required", true);
+            $("#password_confirm").attr("required", true);
+        } else {
+            $("#password").attr("required", false);
+            $("#password_confirm").attr("required", false);
+        }
+    });
 });
