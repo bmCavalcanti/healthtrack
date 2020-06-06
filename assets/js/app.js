@@ -100,4 +100,8 @@ $(document).ready(function() {
             $(this).parent().parent().remove();
         }
     })
+
+    $("body").on("click", ".add-profile-pic", function() {
+        $("body").find(".input-profile-pic").click();
+    })
 });

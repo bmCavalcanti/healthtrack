@@ -23,7 +23,7 @@
                 <div class="overlay-box">
                     <img src="./assets/images/userplaceholder.png" alt="Foto de perfil de Bianca Cavalcanti" class="d-inline-block user-img rounded-circle " width="100"/>
                     <div class="overlay">
-                        <a href="">
+                        <a href="#" title="Alterar foto de perfil" class="add-profile-pic">
                             <i class="fa fa-pencil-alt overlay-icon"></i>
                         </a>
                     </div>
@@ -68,30 +68,56 @@
                         <input type="date" required name="birthdate" class="form-control" value="2000-09-07">
                     </div>
 
+                    <input type="file" name="profile_pic" hidden class="input-profile-pic">
+
                     <button type="submit" class="btn btn-primary btn-block">
                         Salvar alterações
                     </button>
                 </div>
             </form>
-
         </div>
 
         <nav class="fixed-bottom" id="bar-navigation">
             <div class="btn-group w-100" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary text-white">
+                <a type="button" href="./dashboard.html" title="Dashboard" class="btn btn-primary text-white">
                     <i class="fa fa-home"></i><br>
                     <small>Home</small>
-                </button>
-                <button type="button" class="btn btn-primary text-white">
+                </a>
+                <a type="button" href="./profile.html" title="Perfil" class="btn btn-primary text-white">
                     <i class="fa fa-cogs"></i><br>
                     <small>Perfil</small>
-                </button>
-                <button type="button" class="btn btn-primary text-white">
+                </a>
+                <a type="button" data-toggle="modal" data-target="#modalConfirmLogout" title="Sair" class="btn btn-primary text-white">
                     <i class="fa fa-door-open"></i><br>
                     <small>Sair</small>
-                </button>
+                </a>
             </div>
         </nav>
+
+        <div class="modal" id="modalConfirmLogout" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close btn-action" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 class="">Tem certeza que deseja sair?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+                            <button data-dismiss="modal" type="button" title="Não" class="btn btn-outline-primary">
+                                Não
+                            </button>
+                            <a href="./login" title="Sair" class="btn btn-primary">
+                                Sair
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
