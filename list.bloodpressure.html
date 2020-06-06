@@ -15,34 +15,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" crossorigin="anonymous">
 
         <link rel="stylesheet" href="./assets/css/app.css">
-        <title>Listagem de pesos | Health Track</title>
+        <title>Pressão arterial | Health Track</title>
     </head>
     <body>
         <nav class="fixed-top nav-top d-flex align-items-center justify-content-between">
             <a href="" class="mx-3">
                 <i class="fa fa-angle-left fa-2x"></i>
             </a>
-            <h3>Peso</h3>
+            <h3>Pressão arterial</h3>
             <a data-toggle="modal" data-target="#modalCrud" href="" class="mr-3">
                 <i class="fa fa-plus fa-2x"></i>
             </a>
         </nav>
 
         <div class="body-adjust pb-5">
-            <div class="pb-3">
-                <nav class="nav-top d-flex bg-transparent align-items-center justify-content-between mb-3">
-                    <a href="">
-                        <i class="fa fa-angle-left fa-2x"></i>
-                    </a>
-                    <h4>2020</h4>
-                    <a href="">
-                        <i class="fa fa-angle-right fa-2x"></i>
-                    </a>
-                </nav>
-                <canvas id="chart-weight">
-                </canvas>
-            </div>
-
             <div class="input-group p-0 col-12 col-lg-5 mt-5">
                 <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
                 <div class="input-group-append">
@@ -56,13 +42,16 @@
                 <tbody>
                     <tr>
                         <td>
-                            <small>04 de junho de 2020</small>
+                            <small>7 de junho de 2020</small>
                             <br>
-                            43,84 kg
+                            120/80 mmHg
+                        </td>
+                        <td>
+                            Normal
                         </td>
                         <td class="text-right">
                             <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" role="button" class="ml-3 btn-action">
+                                <a data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
                                 <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
@@ -71,66 +60,19 @@
                             </div>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
-                            <small>31 de março de 2020</small>
+                            <small>7 de maio de 2020</small>
                             <br>
-                            42,45 kg
+                            120/85 mmHg
+                        </td>
+                        <td>
+                            Normal
                         </td>
                         <td class="text-right">
                             <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <small>12 de fevereiro de 2020</small>
-                            <br>
-                            45,25 kg
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <small>17 de janeiro de 2020</small>
-                            <br>
-                            42,14 kg
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <small>26 de março de 2019</small>
-                            <br>
-                            52,56 kg
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a data-toggle="modal" data-target="#modalCrud" role="button" class="ml-3 btn-action">
+                                <a data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
                                 <a data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
@@ -144,7 +86,7 @@
 
             <div class="row">
                 <div class="my-auto col-12 col-lg-6">
-                    Apresentando 4 resultados de um total de 4
+                    Apresentando 2 resultados de um total de 2
                 </div>
                 <nav class="col-12 col-lg-6">
                     <ul class="pagination justify-content-end">
@@ -164,6 +106,7 @@
                     </ul>
                 </nav>
             </div>
+
         </div>
 
         <nav class="fixed-bottom" id="bar-navigation">
@@ -187,7 +130,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Gestão de peso</h5>
+                        <h5 class="modal-title">Gestão de pressão arterial</h5>
                         <button type="button" class="close btn-action" data-dismiss="modal">
                             <span>&times;</span>
                         </button>
@@ -195,12 +138,12 @@
                     <form action="" method="POST" autocomplete="off">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Peso (kg)</label>
-                                <input type="text" required name="weight" class="form-control kg" placeholder="Informe seu peso (kg)" data-rule-number="true" max="900" min="10">
+                                <label>Pressão arterial (mmHg)</label>
+                                <input type="text" required name="blood_pressure_value" class="form-control blood-pressure" placeholder="Informe sua pressão arterial (mmHg)">
                             </div>
                             <div class="form-group">
-                                <label>Data da pesagem</label>
-                                <input type="datetime-local" required name="date" class="form-control">
+                                <label>Data da medição</label>
+                                <input type="datetime-local" required name="blood_pressure_date" class="form-control">
                             </div>
                         </div>
                         <div class="modal-footer">

@@ -5,6 +5,10 @@ body, html {
   overflow-x: hidden;
 }
 
+body {
+  margin-top: 80px;
+}
+
 .table {
   color: #CFD2FF;
 }
@@ -14,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: #7443FF;
+  color: #431bb1;
   text-decoration: none;
 }
 
@@ -54,7 +58,7 @@ a:hover {
   border-color: #7443FF;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active {
   background-color: #7443FF !important;
   border-color: #7443FF !important;
   box-shadow: none !important;
@@ -86,15 +90,19 @@ a:hover {
   border-bottom: 2px solid #7443FF;
   border-radius: 0;
   -webkit-transition: .3s border-bottom-color ease;
-      transition: .3s border-bottom-color ease;
+          transition: .3s border-bottom-color ease;
   padding: 0px 5px;
   background: transparent;
   color: #CFD2FF !important;
 }
 
+.select2-container .select2-selection--single .select2-selection__rendered {
+  overflow: unset;
+}
+
 .select2-container {
   margin-bottom: 10px;
-  border-bottom: 2px solid #7443FF;
+  /* border-bottom: 2px solid #7443FF; */
 }
 
 .form-control:disabled {
@@ -170,6 +178,9 @@ label.invalid {
 
 .user-img {
   border: 4px solid #7443FF;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
 }
 
 .imc-bar {
@@ -229,12 +240,12 @@ label.invalid {
 .overlay {
   position: absolute;
   width: 92%;
-  height: 50%;
+  height: 45%;
   background-color: rgba(9, 4, 20, .8);
   border-bottom-left-radius: 110px;
   border-bottom-right-radius: 110px;
-  top: 46%;
-  left: 4%;
+  bottom: 4px;
+  left: 4px;
   font-size: 25px;
 }
 
@@ -243,32 +254,46 @@ label.invalid {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   text-align: center;
+}
+
+table td {
+  vertical-align: middle !important;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-content {
+  background-color: #090414;
+  border-radius: 0;
+  border: 1px solid #CFD2FF;
 }
 
 @media only screen and (min-width: 320px) {
   .body-adjust {
-  margin: 0 20px;
+    margin: 0 20px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .body-adjust {
-  margin: 0 150px;
+    margin: 0 150px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .body-adjust {
-  margin: 0 300px;
+    margin: 0 300px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .body-adjust {
-  margin: 0 450px;
+    margin: 0 450px;
   }
 }
 

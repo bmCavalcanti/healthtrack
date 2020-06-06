@@ -37,6 +37,7 @@ $.validator.addMethod("fullName", function(value, element) {
 function masks() {
     $(".cm").mask("#0.00", {reverse: true});
     $(".kg").mask("#0.00", {reverse: true});
+    $(".blood-pressure").mask("000/000");
 }
 
 function callSelect2() {
@@ -48,7 +49,7 @@ function callSelect2() {
 }
 
 function validateForm(form, response = false) {
-    $(form).validate();
+    $("body").find(form).validate();
     if (response) {
         return $(form).valid();
     }
