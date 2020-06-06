@@ -29,6 +29,18 @@
         </nav>
 
         <div class="body-adjust pb-5">
+
+            <div class="bg-dark marker-left">
+                <h6>
+                    Estatísticas de hoje
+                </h6>
+                <div>
+                    Tempo em movimento: 0 minutos
+                    <br>
+                    Calorias gastas: 0 Cal
+                </div>
+            </div>
+
             <div class="input-group p-0 col-12 col-lg-5 mt-5">
                 <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
                 <div class="input-group-append">
@@ -38,72 +50,100 @@
                 </div>
             </div>
 
-            <table class="table mt-5">
-                <tbody>
-                    <tr>
-                        <td>
-                            <small>04 de junho de 2020 às 17h25</small>
-                            <br>
-                            Caminhada
-                        </td>
-                        <td>
-                            30 minutos (121 Cal)
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
+            <div class="table-responsive">
+                <table class="table mt-5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <a title="Ver atividades" data-toggle="collapse" href="#activity-box-1" role="button" aria-expanded="false">
+                                        <span class="h5"><i class="fa fa-angle-right"></i> 04 de junho de 2020</span>
+                                        <span>(376 Cal gastas)</span>
+                                    </a>
+                                </div>
+                                <div class="mt-3 collapse" id="activity-box-1">
+                                    <ul>
+                                        <li>
+                                            Caminhada às 17h25 (30 minutos - 121 Cal)
+                                            <div class="btn-group" role="group">
+                                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                </a>
+                                                <a title="Remover atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            Ioga às 19h00 (60 minutos - 255 Cal)
+                                            <div class="btn-group" role="group">
+                                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                </a>
+                                                <a title="Remover atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <small>02 de junho de 2020 às 09h40</small>
-                            <br>
-                            Corrida
-                        </td>
-                        <td>
-                            20 minutos (180 Cal)
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <a title="Ver atividades" data-toggle="collapse" href="#activity-box-2" role="button" aria-expanded="false">
+                                        <span class="h5"><i class="fa fa-angle-right"></i> 02 de junho de 2020</span>
+                                        <span>(180 Cal gastas)</span>
+                                    </a>
+                                </div>
+                                <div class="mt-3 collapse" id="activity-box-2">
+                                    <ul>
+                                        <li>
+                                            Corrida às 09h40 (20 minutos - 180 Cal)
+                                            <div class="btn-group" role="group">
+                                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                </a>
+                                                <a title="Remover atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <small>29 de maio de 2020 às 19h00</small>
-                            <br>
-                            Ioga
-                        </td>
-                        <td>
-                            1 hora (225 Cal)
-                        </td>
-                        <td class="text-right">
-                            <div class="btn-group" role="group">
-                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
-                                    <i class="fa fa-pencil-alt"></i>
-                                </a>
-                                <a title="Deletar atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
-                                    <i class="far fa-trash-alt"></i>
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <a title="Ver atividades" data-toggle="collapse" href="#activity-box-3" role="button" aria-expanded="false">
+                                        <span class="h5"><i class="fa fa-angle-right"></i> 29 de maio de 2020</span>
+                                        <span>(255 Cal gastas)</span>
+                                    </a>
+                                </div>
+                                <div class="mt-3 collapse" id="activity-box-3">
+                                    <ul>
+                                        <li>
+                                            Ioga às 19h00 (60 minutos - 255 Cal)
+                                            <div class="btn-group" role="group">
+                                                <a title="Editar atividade física" data-toggle="modal" data-target="#modalCrud" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                </a>
+                                                <a title="Remover atividade física" data-toggle="modal" data-target="#modalConfirmDelete" href="" role="button" class="ml-3 btn-action">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="row">
                 <div class="my-auto col-12 col-lg-6">
@@ -190,9 +230,9 @@
                                     <option value="2">Corrida</option>
                                     <option value="3">Ioga</option>
                                     <option value="4">Dança</option>
-                                    <option value="4">Bicicleta</option>
+                                    <option value="4">Pedalada</option>
                                     <option value="4">Ginástica</option>
-                                    <option value="4">Levantamento de peso</option>
+                                    <option value="4">Musculação</option>
                                     <option value="4">Natação</option>
                                     <option value="4">Outra atividade</option>
                                 </select>
