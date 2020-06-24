@@ -301,6 +301,76 @@ table td {
   border: 1px solid #CFD2FF;
 }
 
+/* Custom box */
+.box {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border-radius: 0;
+  z-index: 1;
+  -moz-osx-font-smoothing: grayscale;
+  color: #431bb1;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.custom-box {
+  border: none;
+  transition: .3s;
+}
+
+.custom-box:hover {
+  background: transparent !important;
+  color: #CFD2FF;
+
+}
+
+.custom-box::before, .custom-box::after {
+  content: '';
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+          transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+          transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.custom-box::before {
+  border: 2px solid #7443FF;
+  opacity: 0;
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+}
+
+.custom-box:hover::before {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.custom-box:hover::after {
+  opacity: 0;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+          transform: scale3d(0.8, 0.8, 1);
+}
+/* End Custom Box */
+
+.icon-circle {
+  background-color: #7443FF;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #CFD2FF
+}
+
 @media only screen and (min-width: 320px) {
   .body-adjust {
     margin: 0 20px;
@@ -324,4 +394,3 @@ table td {
     margin: 0 450px;
   }
 }
-
