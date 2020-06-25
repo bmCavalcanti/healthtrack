@@ -98,7 +98,18 @@
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" crossorigin="anonymous"></script>
-
+        <script>
+            window.watsonAssistantChatOptions = {
+                integrationID: "0b8288e1-c3fa-458e-90e8-d227bca08d52", // The ID of this integration.
+                region: "us-south", // The region your integration is hosted in.
+                serviceInstanceID: "d518cb51-86f0-449e-b69e-b2763efd7aa6", // The ID of your service instance.
+                onLoad: function(instance) { instance.render(); }
+              };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+              document.head.appendChild(t);
+            }); </script>
         <script src="./assets/js/src/App.js"></script>
         <script src="./assets/js/app.js"></script>
     </body>
