@@ -29,7 +29,7 @@ $.validator.setDefaults({
     }
 });
 
-$.validator.addMethod("fullName", function(value, element) {
+$.validator.addMethod("fullname", function(value, element) {
     var val = $.trim(value);
     return this.optional(element) || val.indexOf(" ") >= 0;
 }, "Nome inválido. Por favor, insira seu nome completo.");
