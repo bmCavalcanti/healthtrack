@@ -35,9 +35,10 @@ $.validator.addMethod("fullName", function(value, element) {
 }, "Nome inválido. Por favor, insira seu nome completo.");
 
 function masks() {
-    $(".cm").mask("#0.00", {reverse: true});
-    $(".kg").mask("#0.00", {reverse: true});
-    $(".blood-pressure").mask("000/000");
+    $(".meter").mask("0.00", {reverse: true});
+    $(".kg").mask("000.00", {reverse: true});
+    $(".number").mask("#0.00", {reverse: true});
+    $(".blood-pressure").mask("000/00");
 }
 
 function callSelect2() {

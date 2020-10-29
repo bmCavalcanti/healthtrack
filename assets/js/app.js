@@ -96,7 +96,9 @@ $(document).ready(function() {
     $("body").on("click", ".add-food", function() {
         var i = $(".food").length + 1;
 
-        $(".food").last().after('<div class="food form-row mt-3"><small class="col-12">Alimento ' + i + '</small><div class="col-12 col-lg-7"><input required type="text" name="food[' + i + '][name]" class="form-control" placeholder="Digite o alimento"></div><div class="col-10 col-lg-4"><input required type="text" name="food[' + i + '][cal]" class="form-control" placeholder="Calorias"></div><div class="col-2 col-lg-1"><a type="button" class="btn-action remove-food mt-3" title="Remover alimento"><i class="far fa-trash-alt"></i></a></div></div>');
+        $(".food").last().after('<div class="food form-row mt-3"><div class="col-12 col-lg-7"><small>Alimento ' + i + '</small><input required type="text" name="food[' + i + '][name]" class="form-control" placeholder="Digite o alimento"></div><div class="col-10 col-lg-4"><small>Calorias</small><input required type="text" name="food[' + i + '][cal]" class="form-control number" placeholder="Calorias"></div><div class="col-2 col-lg-1"><a type="button" class="btn-action remove-food mt-3" title="Remover alimento"><i class="far fa-trash-alt"></i></a></div></div>');
+
+        masks();
     });
 
     $("body").on("click", ".remove-food", function() {

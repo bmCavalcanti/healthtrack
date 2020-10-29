@@ -19,10 +19,10 @@
     </head>
     <body>
         <nav class="fixed-top nav-top d-flex align-items-center justify-content-between">
-            <a title="Voltar para a dashboard" href="./dashboard" class="mx-3">
+            <a title="Voltar para a dashboard" href="./dashboard.html" class="mx-3">
                 <i class="fa fa-angle-left fa-2x"></i>
             </a>
-            <h3>Atividade física</h3>
+            <h3><a href="">Atividade física</a></h3>
             <a title="Adicionar atividade física" data-toggle="modal" data-target="#modalCrud" href="" class="mr-3">
                 <i class="fa fa-plus fa-2x"></i>
             </a>
@@ -42,12 +42,14 @@
             </div>
 
             <div class="input-group p-0 col-12 col-lg-5 mt-5">
-                <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
-                <div class="input-group-append">
-                    <button title="Buscar" type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-search fa-1x"></i>
-                    </button>
-                </div>
+                <form action="">
+                    <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
+                    <div class="input-group-append">
+                        <button title="Buscar" type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-search fa-1x"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
 
             <div class="table-responsive">
@@ -230,11 +232,11 @@
                                     <option value="2">Corrida</option>
                                     <option value="3">Ioga</option>
                                     <option value="4">Dança</option>
-                                    <option value="4">Pedalada</option>
-                                    <option value="4">Ginástica</option>
-                                    <option value="4">Musculação</option>
-                                    <option value="4">Natação</option>
-                                    <option value="4">Outra atividade</option>
+                                    <option value="5">Pedalada</option>
+                                    <option value="6">Ginástica</option>
+                                    <option value="7">Musculação</option>
+                                    <option value="8">Natação</option>
+                                    <option value="9">Outra atividade</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -242,8 +244,12 @@
                                 <input type="datetime-local" required name="physical_activity_date" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Duração</label>
+                                <label>Duração (hh:mm)</label>
                                 <input required type="time" name="physical_activity_duration" class="form-control time">
+                            </div>
+                            <div class="form-group">
+                                <label>Calorias gastas</label>
+                                <input required type="text" name="physical_activity_calories" class="form-control number">
                             </div>
                             <div class="form-group">
                                 <label>Descrição</label>

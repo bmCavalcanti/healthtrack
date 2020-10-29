@@ -19,10 +19,10 @@
     </head>
     <body>
         <nav class="fixed-top nav-top d-flex align-items-center justify-content-between">
-            <a title="Voltar para a dashboard" href="./dashboard" class="mx-3">
+            <a title="Voltar para a dashboard" href="./dashboard.html" class="mx-3">
                 <i class="fa fa-angle-left fa-2x"></i>
             </a>
-            <h3>Peso</h3>
+            <h3><a href="">Peso</a></h3>
             <a title="Adicionar peso" data-toggle="modal" data-target="#modalCrud" href="" class="mr-3">
                 <i class="fa fa-plus fa-2x"></i>
             </a>
@@ -49,13 +49,15 @@
                 </h6>
             </div>
 
-            <div class="input-group p-0 col-12 col-lg-5 mt-3">
-                <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
-                <div class="input-group-append">
-                    <button title="Buscar" type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-search fa-1x"></i>
-                    </button>
-                </div>
+            <div class="input-group p-0 col-12 col-lg-5 mt-5">
+                <form action="">
+                    <input type="text" name="search" placeholder="Buscar" type="search" class="form-control"/>
+                    <div class="input-group-append">
+                        <button title="Buscar" type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-search fa-1x"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
 
             <div class="table-responsive">
